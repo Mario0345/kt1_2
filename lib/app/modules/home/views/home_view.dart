@@ -9,16 +9,28 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('HomeView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
+        appBar: AppBar(
+          title: const Text('HomeView'),
+          centerTitle: true,
         ),
-      ),
-    );
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                    onPressed: () {},
+                    child: Obx(
+                      () => Text("${controller.text}",
+                          style: const TextStyle(fontSize: 100)),
+                    )),
+                ElevatedButton(
+                    onPressed: () => controller.plusEmojis(),
+                    child: Text('Press_me'))
+              ],
+            ),
+          ],
+        ));
   }
 }
