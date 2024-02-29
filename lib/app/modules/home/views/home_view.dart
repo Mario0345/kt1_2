@@ -23,11 +23,11 @@ class HomeView extends GetView<HomeController> {
                     onPressed: () {},
                     child: Obx(
                       () => Text("${controller.returnEmoji()}",
-                          style: const TextStyle(fontSize: 100)),
+                          style: const TextStyle(fontSize: 100),),
                     )),
                 ElevatedButton(
                     onPressed: () => controller.currIndex(),
-                    child: Text('Press_me'))
+                    child:const Text('Press_me'))
               ],
             ),
           ],

@@ -5,47 +5,17 @@ import '../../../data/emoji.dart';
 class HomeController extends GetxController {
   //TODO: Implement HomeController
 
-  // var pressed = 0.obs;
+  
   final storageService = Get.find<StorageService>();
   
-  // var list_of_emoji = ['1','2','3','4'].obs;
-  var index = 0.obs;
-
-  // var currentEmoji = EmojiClass.listOfEmoji[index.value].obs;
-  var text = "".obs;
   
-
-  // void plus(){
-  //   pressed.value++;
-  // }
+  var index = 0.obs;
 
   String returnEmoji(){
     return EmojiClass.listOfEmoji[index.value]; 
   }
 
 
-  // String plusEmojis(){
-  //   int currentIdx = 0;
-  //   while (true) {
-  //     if(EmojiClass.listOfEmoji.length == index.value){
-  //       index.value  = 0;
-  //       currentIdx = index.value++;
-  //       storageService.writeIndex(index.value);
-
-  //       return text(EmojiClass.listOfEmoji[currentIdx]);
-  //     }
-  //     else{
-  //       currentIdx = index.value++;
-  //       storageService.writeIndex(index.value);
-  //      return text(EmojiClass.listOfEmoji[currentIdx]);
-  //     }
-     
-  //   }
-  //   // for (var i = 0; i < list_of_emoji.length; i++) {
-  //   //   text(list_of_emoji[i]);
-  //   // }
-    
-  // }
 
   int currIndex() {
     while(true){
@@ -57,7 +27,6 @@ class HomeController extends GetxController {
       else{
         index.value++;
       }
-      print(index.value);
       storageService.writeIndex(index.value);
       return index.value;
       
