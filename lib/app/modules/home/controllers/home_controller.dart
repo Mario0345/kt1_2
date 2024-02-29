@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import '../../../services/storage_service.dart';
 import '../../../data/emoji.dart';
+
 class HomeController extends GetxController {
   //TODO: Implement HomeController
 
